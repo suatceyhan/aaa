@@ -9,9 +9,6 @@ import org.openqa.selenium.support.ui.Select;
 import pages.US06_UserListCreation;
 import utilities.Driver;
 
-import javax.swing.*;
-import java.nio.channels.SelectableChannel;
-
 public class US06_UserListCreationStepDefs {
 
     US06_UserListCreation uspage06 = new US06_UserListCreation();
