@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="102.505">
+<testcase classname="FHCProject" name="01 Login page must be accessible and user can enter datas validly or unvalidly" time="14.889">
+<system-out><![CDATA[Given Environment must be accesable.........................................passed
+And Invalid username invalid password should not acces......................passed
+And Valid username invalid password should not acces........................passed
+And inValid username valid password should not acces........................passed
+Then Valid username valid password should acces succesfully.................passed
+]]></system-out>
+</testcase>
+<testcase classname="FHCProject" name="US02 Main Menu and subtitles must be executable" time="5.897">
+<system-out><![CDATA[Given System Management must be accesible...................................passed
+And Hotel Management must be accesible......................................passed
+And Hotel List must be accesible............................................passed
+And Hotel Rooms must be accesible...........................................passed
+Then Room Reservations must be accesible....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="FHCProject" name="US03 Hotel must be created" time="7.589">
+<system-out><![CDATA[Given Navigate to Hotel List................................................passed
+And Hotel List must be accessible...........................................passed
+And Add Hotel must be executable............................................passed
+And Unsuccesful registration with invalid data..............................passed
+And Clear unsuccesful data..................................................passed
+And Succesful registration with valid data..................................passed
+And Navigate to Hotel List..................................................passed
+Then Check registered data on Hotel List....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="FHCProject" name="US04 Hotel Room must be created." time="39.86">
+<system-out><![CDATA[Given Check that the Hotel Rooms link works.................................passed
+And Check that the Add Hotelroom button works...............................passed
+And When all the information is entered and the save button is pressed, the message has been saved successfully..passed
+And When the information to be entered is not entered, it is seen that it does not register when the save button is pressed..passed
+Then Verify that the entered information is displayed in the Hotel Rooms list.passed
+]]></system-out>
+</testcase>
+<testcase classname="FHCProject" name="US05 Reservation can be created" time="13.408">
+<failure message="element click intercepted: Element &lt;a href=&quot;/admin/RoomReservationAdmin&quot;&gt;...&lt;/a&gt; is not clickable at point (117, 18). Other element would receive the click: &lt;div class=&quot;page-logo&quot; style=&quot;padding-top:5px;&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=87.0.4280.88)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'WIN10', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\suat\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55201}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 7f32579ed1b247f26db87d69544d3776" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given ROOM RESERVATIONS page must be accessible.............................passed
+And ADD ROOM RESERVATION must be executable.................................passed
+And User enters valid datas at Create Hotelroomreservation..................passed
+And Alert Box must be accessible............................................passed
+And Clear invalid data......................................................passed
+And User enters invalid datas at Create Hotelroomreservation................passed
+Then LIST OF RESERVATION must be accessible.................................failed
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="/admin/RoomReservationAdmin">...</a> is not clickable at point (117, 18). Other element would receive the click: <div class="page-logo" style="padding-top:5px;">...</div>
+  (Session info: chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'WIN10', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\suat\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55201}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 7f32579ed1b247f26db87d69544d3776
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sun.reflect.GeneratedMethodAccessor53.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy17.click(Unknown Source)
+	at stepdefinitions.US05_ReservationCreationStepDefs.list_OF_RESERVATION_must_be_accessible(US05_ReservationCreationStepDefs.java:103)
+	at ✽.LIST OF RESERVATION must be accessible(file:///D:/IT/TechProEd/IntelliJ%20IDEA/aaa/src/test/resources/features/FHCProject.feature:47)
+]]></failure>
+</testcase>
+<testcase classname="FHCProject" name="US06 User List Creation" time="20.661">
+<failure message="" type="java.lang.AssertionError"><![CDATA[Given user go to page.......................................................passed
+Given USER LIST page must be accessible.....................................passed
+Given ADD USER button must be executable....................................passed
+Given An User can not be added if all required datas is not entered validly..passed
+Given An User can be added if all required datas entered validly............passed
+Given Check if the Alert Box works..........................................passed
+Given Check if added users can be displayed on User List Table..............failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.US06_UserListCreationStepDefs.check_if_added_users_can_be_displayed_on_User_List_Table(US06_UserListCreationStepDefs.java:117)
+	at ✽.Check if added users can be displayed on User List Table.(file:///D:/IT/TechProEd/IntelliJ%20IDEA/aaa/src/test/resources/features/FHCProject.feature:57)
+]]></failure>
+</testcase>
+</testsuite>
